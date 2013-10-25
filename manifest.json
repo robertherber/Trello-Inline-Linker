@@ -1,0 +1,21 @@
+{
+  "name": "Trello Inline Linker",
+  "description": "A simple plugin to autocomplete a Card ID ('#17') entered into the description field to an actual link to that specific card. Requires that the other card is visible in the same board. Be aware that this isn't quality-tested. I just wanted to throw it out there as it is useful to me.",
+  "manifest_version": 2,
+  "icons": { 
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+    },
+  "version": "0.0.1",
+  "permissions": [
+    "https://trello.com/"
+  ],
+  "web_accessible_resources": ["jquery-2.0.3.js", "plugin.js", "jquery-2.0.3.min.map"] ,
+  "content_scripts": [
+    {
+      "matches": ["https://trello.com/*"],
+      "js": ["jquery-2.0.3.js", "plugin.js"]
+    }
+  ]
+}
